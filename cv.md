@@ -15,15 +15,17 @@
 
 ### MY SKILLS:
 
-- HTML 
+- HTML
 - CSS
 - JS
 - PHP (basic)
+- Git (basic)
 - WordPress
 - WooCommerce
 - Marketing
 - CorelDraw & inkscape
 - Adobe Photoshop & GIMP
+- Figma
 
 <br>
 
