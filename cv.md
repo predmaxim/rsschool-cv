@@ -3,14 +3,16 @@
 ![](https://avatars.githubusercontent.com/u/62261839?s=250&v=4) 
 
 
-## Maxim Predybailo
-[@predmaxim on GitHub](https://github.com/predmaxim)
-<br>
+## **Maxim Predybailo**
 
 `I really like programming, the feeling of "God" that it gives`
-<br><br>
 
-### MY SKILLS:
+### **Contacts**
+- **Location**: Buzuluk, Orenburg region, Russia
+- **Email**: predmaxim@ya.ru
+- **GitHub**: [@predmaxim](https://github.com/predmaxim)
+
+### **Skills:**
 
 - HTML
 - CSS
@@ -24,9 +26,8 @@
 - Adobe Photoshop & GIMP
 - Figma
 
-<br>
 
-### MY LATEST WORDPRESS SITES DEVELOPMENTS (including my own js + php plugins):
+## **My latest WordPress sites developments** (including my own js + php plugins):
 
 - [bbsmp.ru](https://bbsmp.ru) - logo design, website design, layout, server setup, launch
 - [mrdonald.ru](https://mrdonald.ru) - website design, layout, twoo plugins, server setup, launch
