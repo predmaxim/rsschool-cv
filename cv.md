@@ -5,13 +5,10 @@
 
 ## Maxim Predybailo
 [@predmaxim on GitHub](https://github.com/predmaxim)
-<br><br>
-
-```
-"I really like programming, the feeling of "God" that it gives"
-```
 <br>
 
+`I really like programming, the feeling of "God" that it gives`
+<br><br>
 
 ### MY SKILLS:
 
