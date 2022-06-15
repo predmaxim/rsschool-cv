@@ -617,6 +617,9 @@ section {
 
 .footer {
   color: #fff;
+  position:absolute;
+  bottom: 2rem;
+  margin-top: auto;
 }
 
 .rs-school-logo {
@@ -629,7 +632,7 @@ section {
 
 
 main {
-  padding: 5rem 3rem;
+  padding: 3rem;
   margin: auto;
 }
 
@@ -639,11 +642,85 @@ main {
   }
 }
 
-.i-am {}
-
 .profile {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: .8rem;
+}
+
+.wrapper-skill {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.wrapper-skill p {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - .5rem);
+  left: 1rem;
+}
+
+.percent-skill {
+  height: calc(1rem + 20px);
+}
+
+.html .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 85%;
+}
+
+.css .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 90%;
+}
+
+.js .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 35%;
+}
+
+.php .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 10%;
+}
+
+.git .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 30%;
+}
+
+.wp .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 80%;
+}
+
+.woo .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 70%;
+}
+
+.marketing .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 60%;
+}
+
+.html .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 90%;
+}
+.cdandink .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 70%;
+}
+
+.apandgimp .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 70%;
+}
+
+.figma .percent-skill {
+  background-color: rgb(224, 238, 255);
+  width: 80%;
 }
