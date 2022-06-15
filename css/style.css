@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 html,
 body,
@@ -115,7 +115,8 @@ body {
 
 ol,
 ul {
-  list-style: none;
+  /* list-style:none; */
+  padding-left: 2rem;
 }
 
 blockquote,
@@ -485,7 +486,7 @@ body {
   max-width: 1440px;
   font-family: Roboto, sans-serif;
   line-height: 1.4;
-  background: rgb(244, 244, 244);
+  background: rgb(255, 255, 255);
   display: flex;
 }
 
@@ -496,10 +497,23 @@ h4,
 h5,
 h6 {
   color: #000000;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
-  font-variant: small-caps;
-  /* text-transform:uppercase; */
+  /* font-variant: small-caps; */
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0 1.5rem;
+}
+
+li::marker {
+  color: red;
+  font-size: 1.5em;
 }
 
 a {
@@ -509,11 +523,12 @@ a {
 }
 
 a:hover {
-  color: #fd3333d5;
+  /* color: #fd3333d5; */
+  text-decoration:underline 
 }
 
 h1 {
-  font-size: max(4.4rem, 4.4vw);
+  font-size: max(3rem, 2.5vw);
 }
 
 h2 {
@@ -538,14 +553,30 @@ h6 {
 
 header {
   max-width: 460px;
+  max-height: 100vh;
   background: #1D2E43;
   padding: 3rem 4rem;
+  position: sticky;
+  top: 0;
 }
 
-.my-photo {}
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem 1.5rem;
+  }
+}
+
+section {
+  padding: 1.5rem 0;
+}
+
+.my-photo {
+  max-width: 320px;
+  margin: 0 auto;
+}
 
 .photo-img {
-  max-width: 320px;
+  width: 100%;
   border-radius: 10%;
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
@@ -565,15 +596,27 @@ header {
   margin-bottom: 1rem;
 }
 
-.contact>p {
-  margin-left: 1rem;
+.contact a {
+  display: flex;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact svg {
+  width: 25px;
+  height: 25px;
+}
+
+.contact p {
+  margin-left: 10px;
 }
 
 .footer {
-  display: block;
-  height: 100%;
   color: #fff;
-  margin-top: auto;
 }
 
 .rs-school-logo {
@@ -585,11 +628,22 @@ header {
 }
 
 
-
-
-
-
 main {
   padding: 5rem 3rem;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.i-am {}
+
+.profile {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: .8rem;
 }
