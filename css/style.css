@@ -468,9 +468,9 @@ textarea {
   padding: 0.2em 0;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 
 
@@ -483,11 +483,22 @@ textarea {
 
 
 body {
-  max-width: 1440px;
   font-family: Roboto, sans-serif;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.7;
   background: rgb(255, 255, 255);
-  display: flex;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(350px, 415px) minmax(550px, 3fr);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 h1,
@@ -497,13 +508,13 @@ h4,
 h5,
 h6 {
   color: #000000;
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
-  /* font-variant: small-caps; */
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
-h2,
+h2:not(.h2-with-description),
 h3,
 h4,
 h5,
@@ -511,68 +522,80 @@ h6 {
   margin: 1rem 0 1.5rem;
 }
 
-li::marker {
-  color: red;
-  font-size: 1.5em;
+.h2-with-description {
+  margin-top: 1rem;
 }
 
 a {
   color: #fff;
-  font-weight: 700;
+  text-decoration: none;
   transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
 }
 
 a:hover {
-  /* color: #fd3333d5; */
-  text-decoration:underline 
+  color: #ff5e5ef3;
+  text-decoration: underline;
 }
 
 h1 {
-  font-size: max(3rem, 2.5vw);
+  font-size: max(2.8rem, 2vw);
 }
 
 h2 {
-  font-size: max(2.2rem, 2.2vw);
+  font-size: max(2rem, 1.5vw);
 }
 
 h3 {
-  font-size: max(1.8rem, 1.8vw);
+  font-size: max(1.6rem, 1.2vw);
 }
 
 h4 {
-  font-size: max(1.4rem, 1.4vw);
+  font-size: max(1.4rem, 1vw);
 }
 
 h5 {
-  font-size: max(1.1rem, 1.1vw);
+  font-size: max(1rem, .8vw);
 }
 
 h6 {
   font-size: max(1rem, 1vw);
 }
 
+/* Header */
+
 header {
-  max-width: 460px;
-  max-height: 100vh;
+  flex: 1 0 20%;
   background: #1D2E43;
-  padding: 3rem 4rem;
+  padding: 2rem 3rem;
   position: sticky;
   top: 0;
+  height: calc(100vh - 4rem);
+  /* min-width: 250px; */
 }
 
 @media screen and (max-width: 600px) {
   header {
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
+    min-width: initial;
+    position: static;
+    height: initial;
   }
-}
-
-section {
-  padding: 1.5rem 0;
 }
 
 .my-photo {
   max-width: 320px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+}
+
+@media screen and (max-width: 600px) {
+  .my-photo {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 .photo-img {
@@ -591,6 +614,13 @@ section {
   flex-direction: column;
 }
 
+@media screen and (max-width: 600px) {
+  .my-contacts {
+    align-items: center;
+  }
+}
+
+
 .contact {
   display: flex;
   margin-bottom: 1rem;
@@ -598,12 +628,6 @@ section {
 
 .contact a {
   display: flex;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
 }
 
 .contact svg {
@@ -617,23 +641,51 @@ section {
 
 .footer {
   color: #fff;
-  position:absolute;
-  bottom: 2rem;
-  margin-top: auto;
+  position: fixed;
+  bottom: 3rem;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .footer {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    position: relative;
+    bottom: 0px;
+    text-align: center;
+  }
 }
 
 .rs-school-logo {
-  max-width: 110px;
+  max-width: 100px;
 }
 
 .made-by {
   margin-top: 1rem;
 }
 
+/* Main */
+
+section {
+  padding: 1.5rem 0;
+}
 
 main {
   padding: 3rem;
-  margin: auto;
+  flex: 70%;
+}
+
+main a {
+  color: #000;
+  font-weight: 700;
+
+}
+
+main section {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -649,31 +701,43 @@ main {
   margin-bottom: .8rem;
 }
 
+/* My Skills */
+
 .wrapper-skill {
   position: relative;
   border: 1px solid #ccc;
   margin-bottom: 15px;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
 }
 
 .wrapper-skill p {
   position: absolute;
   z-index: 1;
-  top: calc(50% - .5rem);
+  top: calc(50% - .7rem);
   left: 1rem;
 }
 
 .percent-skill {
   height: calc(1rem + 20px);
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
 }
 
 .html .percent-skill {
   background-color: rgb(224, 238, 255);
-  width: 85%;
+  width: 70%;
 }
 
 .css .percent-skill {
   background-color: rgb(224, 238, 255);
-  width: 90%;
+  width: 65%;
 }
 
 .js .percent-skill {
@@ -706,10 +770,6 @@ main {
   width: 60%;
 }
 
-.html .percent-skill {
-  background-color: rgb(224, 238, 255);
-  width: 90%;
-}
 .cdandink .percent-skill {
   background-color: rgb(224, 238, 255);
   width: 70%;
@@ -723,4 +783,76 @@ main {
 .figma .percent-skill {
   background-color: rgb(224, 238, 255);
   width: 80%;
+}
+
+/* My Projects */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-description {
+  margin-bottom: 2rem;
+}
+
+.project-wrapper {
+  /* flex: 1 0 auto; */
+}
+
+.project-wrapper:not(:last-child) {
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+.project-img {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: .2s;
+}
+
+.project-wrapper:hover .project-img {
+  box-shadow: 0px 8px 60px -21px #7e7e7e;
+}
+
+.project-name {
+  padding: 1rem 1rem 0rem;
+}
+
+/* My Experience */
+
+.experience {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  padding: 1rem 0;
+}
+
+.experience::before {
+  content: '⏺';
+  position: absolute;
+  color: red;
+}
+
+.experience:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+
+.experience-date {
+  padding-left: 2rem;
+  font-weight: 700;
+}
+
+/* My English */
+.my-english div::before {
+  content: '⏺';
+  position: absolute;
+  color: red;
+}
+
+.my-english p {
+  padding-left: 2rem;
 }
